@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrati Affiancati con Barra di Ricerca</title>
+    <!-- Unione dei file CSS -->
+    <link rel="stylesheet" href="stile.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra di ricerca sopra le card -->
+    <h1>Benvenuto su MySearch</h1>
+
+    <!-- Menù orizzontale -->
+    <div class="menu">
+        <a href="#">Informazioni</a>
+        <a href="#">Ricerche</a>
+        <a href="#">Altro</a>
+    </div>
+
+    <!-- Barra di ricerca -->
+    <div class="search-container">
+        <form id="searchForm">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Cerca qualcosa..." required>
+                <button type="submit" class="search-button">Cerca</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Contenitore delle card -->
+    <div class="container-card">
+        <!-- Prima card -->
+        <div class="quadrato">
+            <img src="immagine/L'uomo vs Tecnologia.png" alt="Città" class="immagine-citta">
+            <img src="immagine/Logo.jpg" alt="Nuova Immagine" class="immagine-s">
+            <div class="contenuto-testo">
+                <h2>Innovazione</h2>
+                <div class="sottotitolo">L'avvento della Tecnologia nella nostra Società</div>
+                <!-- Testo aggiunto sotto il sottotitolo -->
+                <p class="relazione">La tecnologia ha trasformato la società,<br> portando benefici e sfide.<br><br></p>
+            </div>
+        </div>
+
+        <!-- Seconda card (uguale alla prima) -->
+        <div class="quadrato">
+            <img src="immagine/L'uomo vs Tecnologia.png" alt="Città" class="immagine-citta">
+            <img src="immagine/Logo.jpg" alt="Nuova Immagine" class="immagine-s">
+            <div class="contenuto-testo">
+                <h2>Innovazione</h2>
+                <div class="sottotitolo">L'avvento della Tecnologia nella nostra Società</div>
+                <!-- Testo aggiunto sotto il sottotitolo -->
+                <p class="relazione">La tecnologia ha trasformato la società,<br> portando benefici e sfide.<br><br></p>
+            </div>
+        </div>
+
+        <!-- Terza card (uguale alla prima) -->
+        <div class="quadrato">
+            <img src="immagine/L'uomo vs Tecnologia.png" alt="Città" class="immagine-citta">
+            <img src="immagine/Logo.jpg" alt="Nuova Immagine" class="immagine-s">
+            <div class="contenuto-testo">
+                <h2>Innovazione</h2>
+                <div class="sottotitolo">L'avvento della Tecnologia nella nostra Società</div>
+                <!-- Testo aggiunto sotto il sottotitolo -->
+                <p class="relazione">La tecnologia ha trasformato la società,<br> portando benefici e sfide.<br><br></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funzione per gestire il submit del form
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impedisce l'invio del form
+
+            const query = document.getElementById('searchInput').value;
+            if (query) {
+                // Qui puoi aggiungere altre logiche, come fare una ricerca su un server o simile
+                // Ad esempio, potresti redirigere l'utente a un'altra pagina:
+                // window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            }
+        });
+    </script>
+
+</body>
+</html>
